@@ -4,9 +4,9 @@ C# library to randomize arbitrary object types via Generics. Add objects to the 
 Useage example:
 
 ```     
-  public string ShuffleString(StringBuilder sb)
+  public string ShuffleString(StringBuilder sb, IPrng prng)
   {
-      RandomizedList<char> rando = new RandomizedList<char>(Prng);
+      RandomizedList<char> rando = new RandomizedList<char>(prng);
       for (int i = 0; i < sb.Length; i++)
       {
           rando.Add(sb[i]);
@@ -20,4 +20,4 @@ Useage example:
       return sb.ToString();
   }
 ```
-See https://github.com/mdepaul/XRng.git for Prng useage. It is required to provide the internal randomization functionality of RandomizedList.
+See https://github.com/mdepaul/XRng.git for IPrng useage. It is required to provide the internal randomization functionality of RandomizedList.
